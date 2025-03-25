@@ -2,55 +2,52 @@
 International Movie Database Web Scrapper
 
 ## Overview
-This IMDb Scraper extracts data about the **Top 100 Movies** based on IMDb user ratings. It fetches details such as movie title, release year, runtime, IMDb rating, Metascore, number of votes, and gross collection, then stores them in a structured CSV file.
+This project is a web scraper that extracts movie details from IMDb's top-rated movies list. It uses Python with BeautifulSoup and Requests to fetch and parse movie data, storing it in a CSV file for analysis.
 
 ## Features
-- Scrapes IMDb's Top 100 movies.
-- Extracts relevant movie details.
-- Saves data in CSV format.
-
-## Technologies Used
-- **Python**: For scripting the scraper.
-- **BeautifulSoup**: For parsing HTML content.
-- **Requests**: For making HTTP requests.
-- **Pandas**: For handling and saving data.
-- **NumPy**: For numerical operations.
+- Scrapes movie names, release years, runtime, ratings, metascore, votes, and gross collections.
+- Uses BeautifulSoup for HTML parsing and Requests for web requests.
+- Saves data in a structured CSV format for easy access and analysis.
 
 ## Installation
-### Prerequisites
-Make sure you have Python installed on your system. You can install the required libraries using:
-
-```sh
-pip install requests beautifulsoup4 pandas numpy
-```
-
-## Usage
 1. Clone the repository:
    ```sh
    git clone https://github.com/yourusername/imdb-scraper.git
+   ```
+2. Navigate to the project directory:
+   ```sh
    cd imdb-scraper
    ```
-2. Run the script:
+3. Install required dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+## Usage
+1. Run the script:
    ```sh
    python imdb_scraper.py
    ```
-3. The scraped data will be saved as `Top_100_IMDB_Movies.csv` in the project directory.
+2. The scraped data will be saved as `Top_100_IMDB_Movies.csv` in the project directory.
 
-## Output
-The output CSV file contains the following columns:
-- **Name of Movie**
-- **Year of Release**
-- **Watchtime (Minutes)**
-- **IMDb Rating**
-- **Metascore**
-- **Votes**
-- **Gross Collection**
+## Output Format
+The script generates a CSV file with the following columns:
+- **Name of movie**: Title of the movie
+- **Year of release**: Year the movie was released
+- **Watchtime**: Duration of the movie in minutes
+- **Movie Rating**: IMDb rating
+- **Metascore**: Metacritic score
+- **Votes**: Number of IMDb votes
+- **Gross collection**: Box office revenue (if available)
 
-## Example Output
-```
-| Name of Movie   | Year of Release | Watchtime | IMDb Rating | Metascore | Votes  | Gross Collection |
-|----------------|----------------|-----------|-------------|-----------|--------|------------------|
-| The Shawshank Redemption | 1994 | 142 | 9.3 | 80 | 2,500,000 | $28.3M |
-| The Godfather | 1972 | 175 | 9.2 | 100 | 1,800,000 | $134.9M |
-```
+## Example Output (CSV Preview)
+| Name of movie | Year of release | Watchtime | Movie Rating | Metascore | Votes | Gross collection |
+|--------------|----------------|-----------|--------------|-----------|-------|------------------|
+| The Shawshank Redemption | 1994 | 142 | 9.3 | 80 | 2,500,000 | $28M |
+| The Godfather | 1972 | 175 | 9.2 | 100 | 1,800,000 | $134M |
 
+## Dependencies
+- `pandas`
+- `requests`
+- `beautifulsoup4`
+- `numpy`
