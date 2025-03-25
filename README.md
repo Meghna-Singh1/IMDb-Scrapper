@@ -1,6 +1,5 @@
 # IMDb-Scrapper
 International Movie Database Web Scrapper
-# IMDb Scraper
 
 ## Overview
 This IMDb Scraper extracts data about the **Top 100 Movies** based on IMDb user ratings. It fetches details such as movie title, release year, runtime, IMDb rating, Metascore, number of votes, and gross collection, then stores them in a structured CSV file.
